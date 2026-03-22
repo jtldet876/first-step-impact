@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-heading text-body overflow-x-hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6 lg:px-12;
+  }
+
+  .section-padding {
+    @apply py-24 lg:py-36;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #0067FF;
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background: #0067FF;
+  color: white;
+}
+
+/* Smooth font rendering for large headings */
+.font-serif {
+  font-feature-settings: "kern" 1, "liga" 1;
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#070614"/>
+  <rect x="2" y="2" width="28" height="28" fill="none" stroke="#0067FF" stroke-width="1.5"/>
+  <text x="16" y="21" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#0067FF" text-anchor="middle" letter-spacing="1">FSI</text>
+</svg>
