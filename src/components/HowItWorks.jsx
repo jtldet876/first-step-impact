@@ -72,6 +72,65 @@ export default function HowItWorks() {
           <span className="text-body/30 text-[11px] font-semibold tracking-[0.3em] uppercase">How It Works</span>
         </motion.div>
 
+        {/* ── Beach couple image ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mb-20 lg:mb-28 overflow-hidden"
+          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 88%, 0 100%)' }}
+        >
+          {/* Image with slow breathing scale */}
+          <motion.img
+            src="/seniors-beach.jpg"
+            alt="Active seniors enjoying life at the beach"
+            className="w-full object-cover"
+            style={{ height: 'clamp(260px, 38vw, 520px)' }}
+            animate={{ scale: [1, 1.03, 1] }}
+            transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+          />
+
+          {/* Light overlay so the image doesn't overpower the white section */}
+          <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-transparent" />
+
+          {/* Brand blue left-edge accent bar */}
+          <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand" aria-hidden="true" />
+
+          {/* Top-left corner accent */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="absolute top-5 left-5 w-14 h-14 border-t-2 border-l-2 border-brand"
+            aria-hidden="true"
+          />
+
+          {/* Bottom-right corner accent */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.65 }}
+            className="absolute bottom-10 right-5 w-14 h-14 border-b-2 border-r-2 border-brand/60"
+            aria-hidden="true"
+          />
+
+          {/* Floating label badge */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="absolute bottom-12 left-6 bg-brand px-5 py-3 shadow-xl"
+          >
+            <p className="text-white font-serif font-bold text-base leading-none mb-0.5">Your life. Fully lived.</p>
+            <p className="text-white/70 text-[10px] tracking-[0.2em] uppercase font-medium">Active Aging · Queen Creek, AZ</p>
+          </motion.div>
+        </motion.div>
+
         {/* Heading block */}
         <div className="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-20 mb-24 lg:mb-32">
           <motion.div
