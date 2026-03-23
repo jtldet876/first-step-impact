@@ -105,12 +105,13 @@ export default function About() {
         <section className="relative min-h-screen flex items-end overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
             <img
-              src="https://i0.wp.com/firststepimpact.com/wp-content/uploads/2025/03/IMG_1920.jpeg?fit=791%2C1712&ssl=1"
-              alt="Joe Luma, First Step Impact"
-              className="w-full h-full object-cover object-top"
+              src="/joe-training-session.jpg"
+              alt="Joe Luma training a client at home"
+              className="w-full h-full object-cover object-right"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-dark/97 via-dark/80 to-dark/30" />
-            <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/50" />
+            <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/80 to-dark/35" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-dark/40" />
+            <div className="absolute inset-0 bg-dark/15" />
             <div className="absolute inset-0 bg-brand/5" />
           </div>
 
@@ -264,7 +265,7 @@ export default function About() {
                 </div>
               </motion.div>
 
-              {/* Right: stacked photos */}
+              {/* Right: portrait */}
               <motion.div
                 initial={{ opacity: 0, x: 32 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -272,28 +273,18 @@ export default function About() {
                 transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="relative"
               >
-                {/* Main portrait */}
-                <div className="relative mb-4">
+                <div className="relative">
                   <div className="absolute -top-3 -left-3 w-14 h-14 border-t-2 border-l-2 border-brand/50 z-10" aria-hidden="true" />
                   <div className="absolute -bottom-3 -right-3 w-14 h-14 border-b-2 border-r-2 border-body/20 z-10" aria-hidden="true" />
-                  <div className="overflow-hidden aspect-[4/5]">
+                  <div className="overflow-hidden">
                     <img
-                      src="/joe-luma.png"
+                      src="/joe-headshot.png"
                       alt="Joe Luma — First Step Impact"
-                      className="w-full h-full object-cover object-center"
+                      className="w-full object-cover object-top"
+                      style={{ mixBlendMode: 'multiply' }}
                     />
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand" aria-hidden="true" />
                   </div>
-                </div>
-
-                {/* Second photo — inset */}
-                <div className="ml-10 overflow-hidden border-4 border-white shadow-xl">
-                  <img
-                    src="https://i0.wp.com/firststepimpact.com/wp-content/uploads/2025/03/IMG_1918-2.jpeg?fit=737%2C1598&ssl=1"
-                    alt="Joe Luma training session"
-                    className="w-full aspect-[3/2] object-cover object-top"
-                    loading="lazy"
-                  />
                 </div>
 
                 {/* Floating identity card */}
