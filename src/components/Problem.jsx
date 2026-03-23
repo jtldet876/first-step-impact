@@ -80,7 +80,7 @@ export default function Problem() {
         whileInView={{ opacity: 1, y: 0, rotate: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-        className="absolute -top-16 right-0 w-[200px] lg:w-[260px] xl:w-[310px] pointer-events-none select-none"
+        className="hidden lg:block absolute -top-16 right-0 w-[260px] xl:w-[310px] pointer-events-none select-none"
         aria-hidden="true"
       >
         <motion.img

@@ -109,6 +109,9 @@ export default function About() {
               alt="Joe Luma training a client at home"
               className="w-full h-full object-cover object-right"
             />
+            {/* Mobile: heavy base overlay so text always readable */}
+            <div className="absolute inset-0 bg-dark/70 lg:bg-transparent" />
+            {/* Desktop: directional gradients */}
             <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/80 to-dark/35" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-dark/40" />
             <div className="absolute inset-0 bg-dark/15" />
